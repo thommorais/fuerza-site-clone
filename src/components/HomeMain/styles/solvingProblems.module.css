@@ -1,0 +1,50 @@
+.container {
+	composes: container from '.styles/global.module.css';
+}
+
+.heading {
+	font-size: clamp(1.5rem, 1.8vw, 6.4rem);
+	font-weight: 700;
+	margin-top: 6.5rem;
+	color: var(--c-primary);
+	width: clamp(28rem, 100%, 124rem);
+}
+
+.mapIllustration {
+	margin-top: -11rem;
+}
+
+.mapIllustration svg path {
+	fill: var(--c-primary);
+}
+
+.countriesCount {
+	@apply flex items-center;
+}
+
+.countriesCount strong {
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: var(--c-primary);
+	font-size: 20.5rem;
+}
+
+.countriesCount small {
+	font-size: 3.8rem;
+	font-weight: 400;
+}
+
+.numberContainers {
+	display: grid;
+	gap: 5rem;
+	grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+}
+
+.number strong {
+	font-size: 7.2rem;
+	color: var(--c-primary);
+}
+
+.number small {
+	font-size: 2.4rem;
+}

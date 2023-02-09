@@ -1,0 +1,13 @@
+.container {
+	@apply relative;
+	height: clamp(500px, 100vh, 2990px);
+	background: var(--c-secondary);
+}
+
+.copy {
+	top: calc(50% - 1rem);
+	translate: -50% -50% 1rem;
+	font-size: clamp(1.5rem, 5vw, 8.5rem);
+	color: var(--whiteA12);
+	font-weight: 700;
+}

@@ -1,0 +1,73 @@
+.surface {
+	position: relative;
+	display: grid;
+	place-items: center;
+	z-index: 2;
+	--c-cube: var(--c-primary);
+	--pos: 4.5rem;
+	--cube-h: calc(var(--pos) * 3);
+	--edge-h: calc(var(--pos) + calc(var(--pos) / 2) - 6px);
+	top: 1px;
+	height: var(--cube-h);
+	background: var(--c-cube);
+	transform: translate(var(--pos), calc(var(--pos) * -1));
+	composes: container from '.styles/global.module.css';
+}
+
+.surfaceShadow:before,
+.surface:before,
+.surface:after {
+	position: absolute;
+	content: '';
+	height: 1px;
+	width: var(--edge-h);
+	background: var(--c-cube);
+}
+
+.surface:before,
+.surface:after {
+	left: 0;
+	rotate: -45deg;
+	translate: -100% 0;
+	transform-origin: 100% 0;
+}
+
+.surface:before {
+	top: 0;
+}
+
+.surface:after {
+	bottom: 0;
+}
+
+.surfaceShadow {
+	position: absolute;
+	z-index: 1;
+	top: -1px;
+	left: 0;
+	transform: translate(calc(var(--pos) * -1), var(--pos));
+	height: 100%;
+	width: 100%;
+	border: 1px solid var(--c-cube);
+}
+
+.surfaceShadow:before {
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	rotate: 135deg;
+	transform-origin: 100% 100%;
+	z-index: 1;
+}
+
+.copy {
+	color: var(--whiteA12);
+	text-align: center;
+	font-size: 4.8rem;
+	font-weight: 700;
+	z-index: 2;
+}
+
+.copy span {
+	color: var(--c-secondary);
+}

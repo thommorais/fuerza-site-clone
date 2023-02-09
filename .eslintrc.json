@@ -1,3 +1,61 @@
 {
-  "extends": "next/core-web-vitals"
+	"extends": ["next/core-web-vitals"],
+	"rules": {
+		"prefer-const": [
+			"error",
+			{
+				"destructuring": "all"
+			}
+		],
+		"arrow-body-style": [2, "as-needed"],
+		"no-param-reassign": [
+			2,
+			{
+				"props": false
+			}
+		],
+		"no-unused-expressions": [
+			2,
+			{
+				"allowTaggedTemplates": true
+			}
+		],
+		"no-magic-numbers": [
+			"error",
+			{
+				"ignore": [0, 1, -1, 60, 100, 1000],
+				"ignoreArrayIndexes": true,
+				"enforceConst": false,
+				"detectObjects": false
+			}
+		],
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"no-console": [2],
+		"no-shadow": [
+			2,
+			{
+				"hoist": "all",
+				"allow": ["resolve", "reject", "done", "next", "err", "error"]
+			}
+		],
+		"quotes": [
+			"error",
+			"single",
+			{
+				"avoidEscape": true,
+				"allowTemplateLiterals": true
+			}
+		],
+		"react/prop-types": 0,
+		"comma-dangle": 0,
+		"jsx-a11y/anchor-is-valid": 0,
+		"no-unused-vars": [
+			1,
+			{
+				"ignoreRestSiblings": true,
+				"argsIgnorePattern": "res|next|^err"
+			}
+		]
+	}
 }

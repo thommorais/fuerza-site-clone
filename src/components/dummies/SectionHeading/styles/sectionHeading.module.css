@@ -1,0 +1,7 @@
+.heading {
+	margin-top: 0;
+	margin-bottom: 70px;
+	font-size: 3.6rem;
+	color: var(--c-primary);
+	font-weight: 700;
+}

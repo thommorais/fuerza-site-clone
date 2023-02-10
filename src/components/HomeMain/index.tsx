@@ -1,6 +1,8 @@
 import Cube from './Cube'
 import SolvingProblems from './SolvingProblems'
 import GreateClients from './GreatClients'
+import GreatCases from './GreateCases'
+import Team from './Team'
 
 import S from './styles/main.module.css'
 
@@ -10,6 +12,8 @@ function HomeMain() {
 			<Cube />
 			<SolvingProblems />
 			<GreateClients />
+			<GreatCases />
+			<Team />
 		</main>
 	)
 }

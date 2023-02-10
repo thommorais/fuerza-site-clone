@@ -3,7 +3,7 @@ import S from './styles/solvingProblems.module.css'
 
 function SolvingProblems() {
 	return (
-		<section className='solving-problems'>
+		<section className={S.section}>
 			<div className={S.container}>
 				<h2 className={S.heading}>
 					More than a decade creating solutions in{' '}

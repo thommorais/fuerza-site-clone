@@ -1,0 +1,197 @@
+.allContainer {
+	width: 98vw;
+	height: 98vh;
+	pointer-events: none;
+}
+
+.container {
+	transform-origin: center;
+	height: clamp(1235px, 132vh, 1335px);
+	width: clamp(1235px, 132vh, 1335px);
+	--ringSize: 102%;
+}
+
+.ring {
+	transform: translate(-50%, -50%) scale3d(1, 1, 1);
+	height: var(--ringSize);
+	width: var(--ringSize);
+	border-radius: 100%;
+	border: 0.1rem solid var(--c-primary);
+	transform-origin: 0 0;
+	transform-style: preserve-3d;
+	--percentChange: 0%;
+	--opacity: 0.25;
+	opacity: var(--opacity);
+	height: calc(var(--ringSize) - var(--percentChange));
+	width: calc(var(--ringSize) - var(--percentChange));
+}
+
+.ring:nth-child(2n) {
+	--percentChange: 20%;
+	--opacity: 0.5;
+}
+
+.ring:nth-child(3n) {
+	--percentChange: 38%;
+	--opacity: 0.75;
+}
+
+.ring:nth-child(4n) {
+	--percentChange: 58%;
+	--opacity: 1;
+	z-index: 4;
+}
+
+.ringAnimatedParent {
+	--delay: 0.1s;
+	--time: 50.5s;
+	animation: rotateTopLeft var(--time) var(--delay) infinite linear;
+	transform-origin: top left;
+}
+
+.ringAnimatedParent:nth-child(2n) {
+	--delay: 0.02s;
+	--time: 42.5s;
+}
+
+.ringAnimatedParent:nth-child(3n) {
+	animation: rotateTopLeftInverted var(--time) var(--delay) infinite linear;
+}
+
+.ringAnimatedParent:nth-child(4n) {
+	--delay: 0.03s;
+	--time: 75s;
+	animation: rotate var(--time) var(--delay) infinite linear;
+}
+
+.ringAnimated {
+	border: 1px solid var(--c-primary);
+	background: var(--c-secondary);
+	@apply rounded-full absolute top-1/2 left-0;
+	translate: -50% -50%;
+}
+
+.ringAnimated:not(.ringSizedUp) {
+	height: 1.2rem;
+	width: 1.2rem;
+}
+
+.ringSizedUp {
+	height: 2.4rem;
+	width: 2.4rem;
+}
+
+.hand {
+	position: absolute;
+	will-change: translate;
+	transform: translateX(-65%);
+	--time: 4.2s;
+	animation: floatingTopHand var(--time) infinite var(--move);
+}
+
+.topHand {
+	top: 18%;
+	left: 50%;
+}
+
+.topHandCut {
+	transform: translateX(-51%);
+	animation: floatingTopHandCut var(--time) infinite var(--move);
+	z-index: 4;
+}
+
+.bottomHand {
+	bottom: 20%;
+	left: 50%;
+	width: 40%;
+	z-index: 3;
+	transform: translateX(-35%);
+	animation: floatingBottomHand var(--time) infinite var(--move);
+}
+
+.bottomHandCut {
+	z-index: 4;
+}
+
+@keyframes floatingTopHand {
+	from {
+		transform: translate3d(-65%, 0px, 0);
+	}
+
+	65% {
+		transform: translate3d(-65%, 9px, 0);
+	}
+
+	to {
+		transform: translate3d(-65%, 0, 0);
+	}
+}
+
+@keyframes floatingTopHandCut {
+	from {
+		transform: translate3d(-51%, 0px, 0);
+	}
+
+	65% {
+		transform: translate3d(-51%, 9px, 0);
+	}
+
+	to {
+		transform: translate3d(-51%, 0, 0);
+	}
+}
+
+@keyframes floatingBottomHand {
+	0% {
+		transform: translate3d(-35%, 0px, 0);
+	}
+
+	55% {
+		transform: translate3d(-35%, -9px, 0);
+	}
+
+	100% {
+		transform: translate3d(-35%, 0, 0);
+	}
+}
+
+@keyframes rotateTopLeft {
+	from {
+		rotate: 80deg;
+	}
+
+	to {
+		rotate: 720deg;
+	}
+}
+
+@keyframes rotate {
+	from {
+		rotate: 120deg;
+	}
+
+	to {
+		rotate: 720deg;
+	}
+}
+
+@keyframes rotateTopLeftInverted {
+	from {
+		rotate: 360deg;
+	}
+
+	to {
+		rotate: 0deg;
+	}
+}
+
+.illustrationBrand {
+	translate: -50% -50%;
+}
+
+.rock {
+	bottom: -1vh;
+	left: -2vw;
+	width: 30vw;
+	height: auto;
+}

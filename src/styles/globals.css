@@ -139,3 +139,30 @@ body {
 	padding: 0;
 	right: 0;
 }
+
+.footer svg {
+	fill: none;
+	stroke: var(--c-primary);
+}
+
+.footer {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 25px 0;
+	background: var(--c-secondary);
+}
+
+.footer small {
+	font-size: 1.2rem;
+	color: var(--c-primary);
+}
+
+.st0 {
+	fill: none;
+	stroke-width: 15;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-miterlimit: 10;
+}

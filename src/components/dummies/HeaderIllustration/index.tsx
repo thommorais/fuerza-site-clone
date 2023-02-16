@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import Grid from './Grid'
+import Grid from '.dummies/Grid'
 
 import S from './styles/illustration.module.css'
 
-function Illustration() {
+function Illustration({ showHands = false }: { showHands?: boolean }) {
 	return (
 		<figure className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${S.allContainer}`}>
 			<Grid />
@@ -27,38 +27,42 @@ function Illustration() {
 					</i>
 				</i>
 
-				<Image
-					priority
-					src='https://www.fuerzastudio.com.br/wp-content/themes/fuerza/resources/img/top-hand.png'
-					width={522}
-					height={247}
-					alt='illustration'
-					className={`${S.hand} ${S.topHand}`}
-				/>
-				<Image
-					priority
-					src='https://www.fuerzastudio.com.br/wp-content/themes/fuerza/resources/img/top-hand-cut.png'
-					width={369}
-					height={244}
-					alt='illustration'
-					className={`${S.hand} ${S.topHand} ${S.topHandCut}`}
-				/>
-				<Image
-					priority
-					src='https://www.fuerzastudio.com.br/wp-content/themes/fuerza/resources/img/bottom-hand.png'
-					width={593}
-					height={203}
-					alt='illustration'
-					className={`${S.hand} ${S.bottomHand}`}
-				/>
-				<Image
-					priority
-					src='https://www.fuerzastudio.com.br/wp-content/themes/fuerza/resources/img/bottom-hand-cut.png'
-					width={592}
-					height={203}
-					alt='illustration'
-					className={`${S.hand} ${S.bottomHand} ${S.bottomHandCut}`}
-				/>
+				{showHands ? (
+					<>
+						<Image
+							priority
+							src='https://www.fuerzastudio.com.br/wp-content/themes/fuerza/resources/img/top-hand.png'
+							width={522}
+							height={247}
+							alt='illustration'
+							className={`${S.hand} ${S.topHand}`}
+						/>
+						<Image
+							priority
+							src='https://www.fuerzastudio.com.br/wp-content/themes/fuerza/resources/img/top-hand-cut.png'
+							width={369}
+							height={244}
+							alt='illustration'
+							className={`${S.hand} ${S.topHand} ${S.topHandCut}`}
+						/>
+						<Image
+							priority
+							src='https://www.fuerzastudio.com.br/wp-content/themes/fuerza/resources/img/bottom-hand.png'
+							width={593}
+							height={203}
+							alt='illustration'
+							className={`${S.hand} ${S.bottomHand}`}
+						/>
+						<Image
+							priority
+							src='https://www.fuerzastudio.com.br/wp-content/themes/fuerza/resources/img/bottom-hand-cut.png'
+							width={592}
+							height={203}
+							alt='illustration'
+							className={`${S.hand} ${S.bottomHand} ${S.bottomHandCut}`}
+						/>
+					</>
+				) : null}
 			</div>
 
 			<Image
@@ -69,15 +73,16 @@ function Illustration() {
 				width={375}
 				height={366}
 			/>
-
-			<Image
-				priority
-				src='https://www.fuerzastudio.com.br/wp-content/themes/fuerza/resources/img/pedra.png'
-				className={`${S.rock} absolute`}
-				alt='Illustration brand'
-				width={669}
-				height={370}
-			/>
+			{showHands ? (
+				<Image
+					priority
+					src='https://www.fuerzastudio.com.br/wp-content/themes/fuerza/resources/img/pedra.png'
+					className={`${S.rock} absolute`}
+					alt='Illustration brand'
+					width={669}
+					height={370}
+				/>
+			) : null}
 		</figure>
 	)
 }

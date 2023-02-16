@@ -1,0 +1,27 @@
+.caseItem {
+	margin: 0;
+	max-width: 108rem;
+	max-height: 108rem;
+}
+
+.figCaption {
+	background: rgba(9, 13, 47, 0.85);
+	transform: translate3d(0, 5px, 0);
+	transition: opacity 0.2s var(--move), transform 0.2s var(--enter);
+}
+
+.caseItem:hover .figCaption {
+	transform: translate3d(0, 0, 0);
+}
+
+.figCaption h2 {
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	font-size: 3.3rem;
+	color: var(--c-primary);
+	font-weight: 700;
+	line-height: 1;
+	width: 94%;
+	text-align: center;
+}

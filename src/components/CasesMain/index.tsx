@@ -1,39 +1,9 @@
-'use client'
-
-import { useEffect } from 'react'
-
-import Glide from '@glidejs/glide'
-
 import CaseCard from '.dummies/CaseCard'
+import InternalPageHeading from '.dummies/InternalPageHeading'
 
-const sliderConfiguration = {
-	startAt: 0,
-	perView: 4,
-	keyboard: true,
-	animationDuration: 200,
-	gap: 5,
-	bound: true,
-	breakpoints: {
-		1023: {
-			perView: 3,
-		},
-		800: {
-			perView: 2,
-		},
-		540: {
-			perView: 1,
-		},
-	},
-}
+import S from './styles/main.module.css'
 
-function GreatCases() {
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			const slider = new Glide('.cases-carousel', { ...sliderConfiguration, type: 'slider' })
-			slider.mount()
-		}
-	}, [])
-
+function CasesMain() {
 	const cases = [
 		{
 			title: 'Al Jazeera',
@@ -98,29 +68,16 @@ function GreatCases() {
 	]
 
 	return (
-		<div className='cases-carousel carousel relative w-full'>
-			<div data-glide-el='track'>
-				<div className={`carousel-wrapper flex lg:justify-center`}>
-					{cases.map(({ title, image, url }) => (
-						<CaseCard
-							key={title}
-							title={title}
-							image={image}
-							url={url}
-							className='carousel-item glide__slide--active relative block'
-						/>
-					))}
-				</div>
+		<main className={`${S.main} pt-28`}>
+			<InternalPageHeading title='these companies have changed and stayed' />
+
+			<div className='grid grid-cols-2 2xl:grid-cols-4 gap-4 px-4 mt-16 mb-4'>
+				{cases.map(({ title, image, url }) => (
+					<CaseCard key={title} title={title} image={image} url={url} />
+				))}
 			</div>
-			<div data-glide-el='controls'>
-				<button data-glide-dir='>' name='next' aria-label='Next slide' className='relative'>
-					<svg aria-hidden='true' viewBox='0 0 50 50' width='50' height='50' xmlns='http://www.w3.org/2000/svg'>
-						<path d='M15 2.75l-2.086 2.086L33.078 25 12.914 45.164 15 47.25 37.25 25z' />
-					</svg>
-				</button>
-			</div>
-		</div>
+		</main>
 	)
 }
 
-export default GreatCases
+export default CasesMain

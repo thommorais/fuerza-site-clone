@@ -1,0 +1,13 @@
+.header {
+	@apply relative;
+	height: clamp(32rem, 100vh, 51rem);
+	background: var(--c-secondary);
+	overflow: hidden;
+}
+
+.pageTitle {
+	margin-top: -0.1em;
+	font-size: 8.5rem;
+	font-weight: 700;
+	color: var(--whiteA12);
+}

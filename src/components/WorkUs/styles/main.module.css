@@ -1,0 +1,8 @@
+.container {
+	width: clamp(320px, 90vw, 192rem);
+	@apply mx-auto;
+}
+
+.main {
+	min-height: 10vh;
+}

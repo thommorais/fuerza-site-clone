@@ -1,7 +1,9 @@
 import { HTMLAttributes } from 'react'
 
+import Link from 'next/link'
 import classNames from '.utils/classnames'
 import S from './styles/button.module.css'
+import { Url } from 'url'
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 	className?: string
@@ -9,13 +11,13 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 	variant?: 'primary' | 'basic' | 'danger' | 'ghost' | 'bordeless'
 	variants?: ('primary' | 'basic' | 'danger' | 'ghost' | 'bordeless')[]
 	size?: 'large' | 'medium' | 'small'
-	href?: string
+	href: Url | string
 	target?: string
 	rel?: string
 	title?: string
 }
 
-function Button(props: ButtonProps) {
+function LinkBtn(props: ButtonProps) {
 	const { variant, variants, size, primary, className, href, target, rel, title } = props
 
 	const classes = classNames(
@@ -35,10 +37,10 @@ function Button(props: ButtonProps) {
 	)
 
 	return (
-		<a href={href} target={target} rel={rel} title={title} className={`${classes}`}>
+		<Link href={href} target={target} rel={rel} title={title} className={`${classes}`}>
 			{props.children}
-		</a>
+		</Link>
 	)
 }
 
-export default Button
+export default LinkBtn

@@ -83,11 +83,10 @@ meter {
 }
 
 body {
-	/* 10 to facilitate dealing with rem */
 	font-size: 1.6rem;
 	line-height: 1.15;
 	font-family: var(--base-font);
-	color: var(--c-copyw2qdfx);
+	color: var(--c-copy);
 	background: url(https://www.fuerzastudio.com.br/wp-content/themes/fuerza/public/resources/img/pattern-noise.png);
 	-webkit-tap-highlight-color: transparent;
 	text-rendering: optimizeSpeed;

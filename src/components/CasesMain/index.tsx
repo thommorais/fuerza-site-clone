@@ -8,62 +8,62 @@ function CasesMain() {
 		{
 			title: 'Al Jazeera',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20221228185329/thumb_1200x1200-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/al-jazeera/',
+			url: '/cases/al-jazeera-en/',
 		},
 		{
 			title: 'Medal.tv',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20221028173206/thumbnail-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/medal-tv/',
+			url: '/cases/medal-tv-en/',
 		},
 		{
 			title: 'Matrioska',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20221230145852/thumb-1200x1200-1-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/matrioska/',
+			url: '/cases/matrioska/',
 		},
 		{
 			title: 'BlueStacks X',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20220218203035/thumbnail-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/bluestacks/',
+			url: '/cases/bluestacks/',
 		},
 		{
 			title: 'Ready Set',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20210812202200/tile_RS-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/ready-set/',
+			url: '/cases/ready-set/',
 		},
 		{
 			title: 'Eurekka',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20210812212048/thumbnail-3-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/eurekka/',
+			url: '/cases/eurekka/',
 		},
 		{
 			title: 'Jam City',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20210812213149/thumbnail-4-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/jam-city/',
+			url: '/cases/jam-city/',
 		},
 		{
 			title: 'OMS',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20211026220024/thumbnail-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/oms/',
+			url: '/cases/who/',
 		},
 		{
 			title: '8W8',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20210812211043/thumbnail-2-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/8w8/',
+			url: '/cases/8w8',
 		},
 		{
 			title: 'Branding',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20210812202428/thumb_branding-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/branding/',
+			url: '/cases/branding-en/',
 		},
 		{
 			title: 'Harry Potter',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20210812202228/HP-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/harry-potter/',
+			url: '/cases/harry-potter/',
 		},
 		{
 			title: 'Words With Friends',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20210812202252/WWF-768x768.jpg',
-			url: 'https://www.fuerzastudio.com.br/cases/word-with-friends/',
+			url: '/cases/word-with-friends-en/',
 		},
 	]
 

@@ -6,7 +6,7 @@ import S from './styles/greatClients.module.css'
 
 function GreateClients() {
 	return (
-		<section className={S.section}>
+		<section className={`${S.section} py-40`}>
 			<div className={S.container}>
 				<SectionHeading title='great clients_' />
 				<div className={`grid ${S.gridClients}`}>

@@ -11,17 +11,12 @@ import S from './styles/greatCases.module.css'
 
 function GreatCases() {
 	return (
-		<section className={S.section}>
+		<section className={`${S.section} pt-40`}>
 			<div className={S.container}>
 				<SectionHeading title='great cases_' />
 			</div>
 			<GreatCasesCarouselDynamic />
-			<Button
-				href='https://www.fuerzastudio.com.br/en/cases'
-				title='View all cases'
-				className='cases-button button animate-btn'
-				variant='basic'
-			>
+			<Button href='/cases' title='View all cases' variant='basic'>
 				View all cases
 			</Button>
 		</section>

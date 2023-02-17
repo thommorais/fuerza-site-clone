@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import S from './styles/caseCard.module.css'
 
@@ -11,7 +12,7 @@ export type CaseCardProps = {
 
 function CaseCard({ title, image, url, className }: CaseCardProps) {
 	return (
-		<a
+		<Link
 			href={url}
 			title={`See the ${title} case`}
 			className={`${S.caseItem} ${className} relative aspect-square inline-block`}
@@ -24,7 +25,7 @@ function CaseCard({ title, image, url, className }: CaseCardProps) {
 					</h2>
 				</figcaption>
 			</figure>
-		</a>
+		</Link>
 	)
 }
 

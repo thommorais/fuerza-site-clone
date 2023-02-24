@@ -1,5 +1,4 @@
 import HeaderIllustration from '.dummies/HeaderIllustration'
-
 import S from './styles/header.module.css'
 
 function HomeHeader() {

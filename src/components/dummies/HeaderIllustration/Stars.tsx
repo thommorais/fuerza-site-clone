@@ -223,7 +223,8 @@ function Stars() {
 		canvas.current.addEventListener('mouseup', () => (mouse.down = false))
 
 		// Reset canvas size, starfield size, and camera position on window resize
-		window.addEventListener('resize', () => {
+
+		function onResize() {
 			if (!canvas.current) return
 			canvas.current.width = window.innerWidth
 			canvas.current.height = window.innerHeight
@@ -231,7 +232,9 @@ function Stars() {
 			sf.height = 2 * window.innerHeight
 			sf.x = sf.width / 2
 			sf.y = sf.height / 2
-		})
+		}
+
+		window.addEventListener('resize', onResize)
 
 		let t0 = Date.now() - 1 / 60
 		function loop() {
@@ -243,6 +246,10 @@ function Stars() {
 		}
 
 		requestAnimationFrame(loop)
+
+		return () => {
+			window.removeEventListener('resize', onResize)
+		}
 	}, [])
 
 	return <canvas ref={canvas} />

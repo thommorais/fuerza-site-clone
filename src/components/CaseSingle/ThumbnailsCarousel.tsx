@@ -47,6 +47,9 @@ function ThumbnailsCarousel({ caseData }: { caseData: Casetype }) {
 		},
 	]
 
+	// eslint-disable-next-line no-console
+	console.log(caseData)
+
 	return (
 		<div className='cases-carousel carousel relative w-full'>
 			<div data-glide-el='track'>

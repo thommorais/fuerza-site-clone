@@ -11,7 +11,7 @@ import S from './styles/greatCases.module.css'
 
 function GreatCases() {
 	return (
-		<section className={`${S.section} pt-40`}>
+		<section className={`${S.section} pt-40 overflow-hidden`}>
 			<div className={S.container}>
 				<SectionHeading title='great cases_' />
 			</div>

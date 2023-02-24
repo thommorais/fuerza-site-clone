@@ -53,7 +53,7 @@ function CasesMain() {
 		{
 			title: 'Branding',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20210812202428/thumb_branding-768x768.jpg',
-			url: '/cases/branding-en/',
+			url: '/cases/branding/',
 		},
 		{
 			title: 'Harry Potter',
@@ -63,7 +63,7 @@ function CasesMain() {
 		{
 			title: 'Words With Friends',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20210812202252/WWF-768x768.jpg',
-			url: '/cases/word-with-friends-en/',
+			url: '/cases/word-with-friends/',
 		},
 	]
 

@@ -25,3 +25,21 @@
 	width: 94%;
 	text-align: center;
 }
+
+.caseItem:not(.caseActive) figure:before {
+	position: absolute;
+	inset: 0;
+	content: '';
+	pointer-events: none;
+	background-color: var(--c-overlay);
+}
+
+.caseITem:not(.caseActive) img {
+	filter: grayscale(1);
+	transition: filter 0.33s var(--move);
+}
+
+.caseItem:not(.caseActive) img:not(:hover) {
+	opacity: 0.9;
+	mix-blend-mode: luminosity;
+}

@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import '@radix-ui/colors/whiteA.css';
 
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+*:where(:not(html, iframe, canvas, img, svg, video, audio, pre):not(svg *, symbol *)) {
 	all: unset;
 	display: revert;
 }
@@ -98,7 +98,10 @@ body {
 	/* colors */
 	--c-primary: #ff0036;
 	--c-secondary: #050f2d;
+	--c-silver: #98a7bd;
 	--c-copy: var(--c-secondary);
+	--c-surface: var(--whiteA12);
+	--c-overlay: rgba(44, 66, 189, 0.33);
 	/* font */
 	--f-copy: 1.6rem;
 	--f-family: 'Space Mono', monospace;

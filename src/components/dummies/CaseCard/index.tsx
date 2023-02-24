@@ -8,14 +8,15 @@ export type CaseCardProps = {
 	image: string
 	url: string
 	className?: string
+	active?: boolean
 }
 
-function CaseCard({ title, image, url, className }: CaseCardProps) {
+function CaseCard({ title, image, url, className, active = false }: CaseCardProps) {
 	return (
 		<Link
 			href={url}
 			title={`See the ${title} case`}
-			className={`${S.caseItem} ${className} relative aspect-square inline-block`}
+			className={`${S.caseItem} ${active ? S.caseActive : ''} ${className} relative aspect-square inline-block`}
 		>
 			<figure className='relative w-full h-full m-0 table aspect-square'>
 				<Image height={1080} width={1080} src={image} alt={title} />

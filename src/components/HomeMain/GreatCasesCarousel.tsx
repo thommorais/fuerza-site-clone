@@ -38,12 +38,12 @@ function GreatCases() {
 		{
 			title: 'Al Jazeera',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20221228185329/thumb_1200x1200-768x768.jpg',
-			url: '/cases/al-jazeera/',
+			url: '/cases/al-jazeera-en/',
 		},
 		{
 			title: 'Medal.tv',
 			image: 'https://fuerza-site-production.s3.amazonaws.com/20221028173206/thumbnail-768x768.jpg',
-			url: '/cases/medal-tv/',
+			url: '/cases/medal-tv-en/',
 		},
 		{
 			title: 'Matrioska',

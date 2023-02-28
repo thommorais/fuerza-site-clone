@@ -7,7 +7,7 @@ function PagesHeader({ pageTitle }: { pageTitle: string }) {
 			<HeaderIllustration />
 
 			<div className='absolute top-0 left-0 w-full h-full grid place-items-center'>
-				<h1 className={S.pageTitle}>{pageTitle}</h1>
+				<h1 className={`${S.pageTitle} type-shuffle`}>{pageTitle}</h1>
 			</div>
 		</header>
 	)

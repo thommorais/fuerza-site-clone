@@ -2,10 +2,6 @@ import '.styles/globals.css'
 
 import { Space_Mono } from '@next/font/google'
 
-import dynamic from 'next/dynamic'
-
-const ClientSideEffects = dynamic(() => import('.dummies/ClientSideEffects'), { ssr: false })
-
 const spaceMono = Space_Mono({
 	variable: '--base-font',
 	weight: ['400', '700'],
@@ -31,7 +27,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 						<small>® Fuerza Studio - All rights reserved</small>
 					</footer>
 				</div>
-				<ClientSideEffects />
 				<svg className='hidden'>
 					<symbol id='pin-icon' viewBox='0 0 93 127'>
 						<path

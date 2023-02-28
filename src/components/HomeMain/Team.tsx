@@ -1,6 +1,8 @@
 import TeamCard from '.dummies/TeamCard'
 import S from './styles/team.module.css'
 
+import Link from 'next/link'
+
 function Team() {
 	const team = [
 		{
@@ -51,14 +53,14 @@ function Team() {
 					))}
 				</div>
 
-				<a href='https://www.fuerzastudio.com.br/en/team' className={S.btn}>
+				<Link href='/team' className={S.btn}>
 					<div className={`${S.btnLabel} absolute right-0`}>view all</div>
 					<div>
 						<svg aria-hidden='true' viewBox='0 0 50 50' width='50' height='50' xmlns='http://www.w3.org/2000/svg'>
 							<path d='M15 2.75l-2.086 2.086L33.078 25 12.914 45.164 15 47.25 37.25 25z' />
 						</svg>
 					</div>
-				</a>
+				</Link>
 			</div>
 		</section>
 	)

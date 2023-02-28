@@ -317,7 +317,7 @@ export default class TypeShuffle {
 
         for (const line of this.lines) {
             for (const cell of line.cells) {
-                setTimeout(() => loop(line, cell), randomNumber(0, 2000))
+                setTimeout(() => loop(line, cell), randomNumber(0, 200))
             }
         }
     }

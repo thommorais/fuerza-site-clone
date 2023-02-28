@@ -19,7 +19,7 @@ function Stars() {
 
 		if (!canvas.current) return
 
-		const header = document.querySelector('header')
+		const header = window.document.querySelector('header')
 
 		let sizes = header ? header.getBoundingClientRect() : { width: 0, height: 0 }
 

@@ -52,7 +52,6 @@ class Cell {
         this.DOM.el = DOM_el
         this.original = this.DOM.el.innerHTML
         this.state = this.original
-        this.color = this.originalColor = getComputedStyle(document.documentElement).getPropertyValue('--color-text')
         this.position = position
         this.previousCellPosition = previousCellPosition
     }

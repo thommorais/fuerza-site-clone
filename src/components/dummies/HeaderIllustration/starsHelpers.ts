@@ -94,6 +94,7 @@ export function drawStars({
 		const color = Math.floor(224 * Math.max(1 - z / depth, 0) + 16)
 		ctx.fillStyle = `rgb(${color}, ${color}, ${color})`
 		ctx.globalAlpha = Math.min(Math.max(0, 1 - Math.exp(-z + 1)), 1)
+		ctx.beginPath()
 
 		if (warpMode) {
 			const wf = 1.0 + 0.2 * warp
@@ -101,7 +102,6 @@ export function drawStars({
 
 			const sx2 = (focalLength * (star.x - width)) / z2
 			const sy2 = (focalLength * (star.y - height)) / z2
-
 			const r2 = (star.r * focalLength) / z2
 			const beta = Math.asin((r2 - sr) / Math.hypot(sx2 - sx, sy2 - sy))
 
@@ -109,25 +109,20 @@ export function drawStars({
 				const a1 = Math.atan2(sy - sy2, sx2 - sx) - beta
 				const a2 = Math.atan2(sy2 - sy, sx - sx2) + beta
 
-				ctx.beginPath()
 				ctx.arc(sx, sy, sr, halfPI - a1, halfPI - a2, false)
 				ctx.arc(sx2, sy2, r2, halfPI - a2, halfPI - a1, false)
 				ctx.closePath()
-				ctx.fill()
 			} else {
-				ctx.beginPath()
 				if (sr > r2) {
 					ctx.arc(sx, sy, sr, 0, doublePI, false)
 				} else {
 					ctx.arc(sx2, sy2, r2, 0, doublePI, false)
 				}
-				ctx.fill()
 			}
 		} else {
-			ctx.beginPath()
 			ctx.arc(sx, sy, sr, 0, doublePI, false)
-			ctx.fill()
 		}
+		ctx.fill()
 	}
 
 	ctx.restore()
@@ -241,15 +236,16 @@ export function loopStarField({
 	let warpEnd = 0
 	let warpStart = 0
 
-	const maxRadius = 1.2
+	const maxRadius = 1.5
 	const minRadius = 0.3
-	const depth = 35
+
+	const depth = 100
 
 	let stars: Stars = createStars({
 		width,
 		height,
 		depth,
-		numStars: 500,
+		numStars: 2000,
 		maxRadius,
 		minRadius,
 	})
@@ -273,6 +269,8 @@ export function loopStarField({
 	const halfHeight = height * 0.5
 	function loop() {
 		if (ctx) {
+			const dt = Date.now() - t0
+			t0 = Date.now()
 			const {
 				stars: updatedStars,
 				index: updatedIndex,
@@ -293,12 +291,21 @@ export function loopStarField({
 				width,
 				height,
 				depth,
-				dt: Date.now() - t0,
+				dt,
 				warpStart,
 				warpEnd,
 				warp,
 				warpMode,
 			})
+
+			speed = updatedSpeed
+			stars = updatedStars
+			index = updatedIndex
+			focalLength = updatedFocalLength
+			zIndex = updatedZ
+			warp = updatedWarp
+			warpEnd = updatedWarpEnd
+			warpStart = updatedWrapStart
 
 			drawStars({
 				ctx,
@@ -314,15 +321,6 @@ export function loopStarField({
 				warpMode,
 			})
 
-			t0 = Date.now()
-			speed = updatedSpeed
-			stars = updatedStars
-			index = updatedIndex
-			focalLength = updatedFocalLength
-			zIndex = updatedZ
-			warp = updatedWarp
-			warpEnd = updatedWarpEnd
-			warpStart = updatedWrapStart
 			requestAnimationFrame(loop)
 		}
 	}

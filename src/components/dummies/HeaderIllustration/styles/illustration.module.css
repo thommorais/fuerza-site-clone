@@ -195,7 +195,7 @@
 }
 
 .rock {
-	bottom: -1vh;
+	bottom: 0vh;
 	left: -2vw;
 	width: 30vw;
 	height: auto;

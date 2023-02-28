@@ -1,8 +1,7 @@
 import HeaderIllustration from '.dummies/HeaderIllustration'
 import S from './styles/header.module.css'
 
-import dynamic from 'next/dynamic'
-const PageTitleShuffle = dynamic(() => import('.components/dummies/PageTitleShuffle'), { ssr: false })
+import PageTitleShuffle from '.components/dummies/PageTitleShuffle'
 
 function PagesHeader({ pageTitle }: { pageTitle: string }) {
 	return (

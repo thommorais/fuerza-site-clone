@@ -1,6 +1,6 @@
 .container {
 	@apply relative;
-	height: clamp(500px, 100vh, 2990px);
+	height: clamp(500px, 98vh, 2990px);
 	background: var(--c-secondary);
 }
 

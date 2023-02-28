@@ -11,6 +11,11 @@
 	--ringSize: 102%;
 }
 
+.canvas {
+	@apply absolute w-full;
+	height: 100%;
+}
+
 .ring {
 	transform: translate(-50%, -50%) scale3d(1, 1, 1);
 	height: var(--ringSize);

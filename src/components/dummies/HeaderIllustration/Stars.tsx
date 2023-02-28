@@ -17,8 +17,12 @@ function Stars() {
 
 		if (!canvas.current) return
 
-		const width = window.innerWidth
-		const height = (window.innerHeight * 98) / 100
+		const header = document.querySelector('header')
+
+		let sizes = header ? header.getBoundingClientRect() : { width: 0, height: 0 }
+
+		const width = sizes.width
+		const height = (sizes.height * 98) / 100
 		canvas.current.width = width
 		canvas.current.height = height
 		const ctx = canvas.current.getContext('2d')
@@ -26,8 +30,10 @@ function Stars() {
 
 		function onResize() {
 			if (canvas.current) {
-				canvas.current.width = window.innerWidth
-				canvas.current.height = (window.innerHeight * 98) / 100
+				sizes = header ? header.getBoundingClientRect() : { width: 0, height: 0 }
+
+				canvas.current.width = sizes.width
+				canvas.current.height = (sizes.height * 98) / 100
 			}
 		}
 

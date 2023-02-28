@@ -6,7 +6,7 @@ function HomeHeader() {
 		<header className={S.container}>
 			<HeaderIllustration showHands />
 			<h1 className={`absolute left-1/2 z-9 m-0 p-0 w-screen text-center ${S.copy}`}>
-				<span>change is inevitable_</span>
+				<div className='type-shuffle'>change is inevitable_</div>
 			</h1>
 		</header>
 	)

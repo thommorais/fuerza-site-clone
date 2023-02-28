@@ -11,7 +11,7 @@ export default function Case({ params }: { params: { slug: string } }) {
 
 	return (
 		<>
-			<PagesHeader pageTitle={params.slug} />
+			<PagesHeader pageTitle={caseData.title} />
 			<CaseSingle caseData={caseData} />
 		</>
 	)

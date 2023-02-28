@@ -330,26 +330,28 @@ export function loopStarField({
 	ctx: CanvasRenderingContext2D | null
 }) {
 	let index = 0
-	let focalLength = 10
+	let focalLength = 75
 	let zIndex = 0
-	let speed = 2
-	let warp = 20
-	let warpEnd = 4
-	let warpStart = 2
+	let speed = 200000
+	let warp = 0
+	let warpEnd = 0
+	let warpStart = 0
 
 	const maxRadius = 0.8
 	const minRadius = 0.04
-	const depth = 100
+	const depth = 35
 
 	let stars: Stars = createStars({
 		width,
 		height,
 		depth,
-		numStars: 1000,
+		numStars: 750,
 	})
 
 	let t0 = Date.now() - 1 / 60
+
 	let warpMode = false
+
 	function startWarpMpde() {
 		warpMode = true
 	}

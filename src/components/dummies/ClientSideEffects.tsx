@@ -3,10 +3,10 @@
 import TypeShuffle from '.utils/typeShuffle'
 
 /* eslint-disable no-magic-numbers */
-import { useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 
 function ClientSideEffects() {
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (typeof window === 'undefined' || typeof document === 'undefined') return
 
 		const typeShufflesEls = [...(document.querySelectorAll('.type-shuffle') || [])]

@@ -2,7 +2,9 @@ import '.styles/globals.css'
 
 import { Space_Mono } from '@next/font/google'
 
-import ClientSideEffects from '.dummies/ClientSideEffects'
+import dynamic from 'next/dynamic'
+
+const ClientSideEffects = dynamic(() => import('.dummies/ClientSideEffects'), { ssr: false })
 
 const spaceMono = Space_Mono({
 	variable: '--base-font',

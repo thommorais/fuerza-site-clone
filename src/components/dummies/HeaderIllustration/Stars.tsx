@@ -13,7 +13,9 @@ function Stars() {
 	const canvas = useRef<HTMLCanvasElement>(null)
 
 	useLayoutEffect(() => {
-		if (typeof window === 'undefined' || !canvas.current) return
+		if (typeof window === 'undefined' || !canvas.current) {
+			return
+		}
 
 		if (!canvas.current) return
 
